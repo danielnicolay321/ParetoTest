@@ -26,7 +26,8 @@ class Climate(db.Model):
     rainfall = db.Column(db.Integer)
     temperature = db.Column(db.Integer)
 
-    def __init__(self, date, rainfall, temperature):
+    def __init__(self, id, date, rainfall, temperature):
+        self.id = id
         self.date = date
         self.rainfall = rainfall
         self.temperature = temperature
